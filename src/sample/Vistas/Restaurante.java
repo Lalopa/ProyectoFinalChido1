@@ -36,7 +36,8 @@ public class Restaurante extends Stage implements EventHandler {
     // launch the application
     public Restaurante(mainsRes menu[], ArrayList articulos, Integer numMesa)
 
-    {   this.n=numMesa;
+    {
+        this.n=numMesa;
         this.arti=articulos;
         this.menu=menu;
         crearGUI();
@@ -45,6 +46,17 @@ public class Restaurante extends Stage implements EventHandler {
         escena.getStylesheets().add(getClass().getResource("../CSS/interfazRes.css").toExternalForm());
         setScene(escena);
         show();
+    }
+    public Restaurante(mainsRes menu[]){
+        n=-1;
+        arti= new ArrayList();
+        crearGUI();
+        escena = new Scene(vBoxPrincipal, 1000,700);
+        setTitle("Select your mains");
+        escena.getStylesheets().add(getClass().getResource("../CSS/interfazRes.css").toExternalForm());
+        setScene(escena);
+        show();
+
     }
 
     private void crearGUI() {
