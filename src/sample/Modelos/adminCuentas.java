@@ -12,13 +12,15 @@ import javafx.stage.Stage;
 
 public class adminCuentas extends Stage  implements EventHandler {
     private Scene escena;
-    Button cerrarCuenta;
+    Button cerrarCuenta, editarCuentas;
     private VBox vBoxPrincipal;
 
        public adminCuentas(){
 
             iniciarComponentes();
             vBoxPrincipal.getChildren().add(cerrarCuenta);
+            vBoxPrincipal.getChildren().add(editarCuentas);
+            vBoxPrincipal.setSpacing(20);
             vBoxPrincipal.setAlignment(Pos.CENTER);
             vBoxPrincipal.setId("adminCuentas");
             //cerrarCuenta.setPadding(new Insets(20,20,20,20));
@@ -32,6 +34,7 @@ public class adminCuentas extends Stage  implements EventHandler {
 
         vBoxPrincipal= new VBox();
         cerrarCuenta= new Button("Cancelar Cuentas");
+        editarCuentas= new Button("Editar Cuentas");
 
 
     }
